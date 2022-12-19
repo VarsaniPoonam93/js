@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+</head>
+
+<body>
+    <script>
+
+        let cal = 0
+
+        let a = prompt(" give a number")
+        a = Number.parseInt(a)
+        for (x = 0; x < a; x++) {
+            console.log(x);
+            cal += (x)
+        }
+        console.log(cal + a);
+
+        let obj = {
+            uday: 12,
+            ravi: 45,
+            diya: 78,
+            poonam: 87
+        }
+        console.log(obj);
+        for (let a in obj) {
+
+            console.log(a + obj[a]);
+        }
+
+        for (let b of "kalagee") {
+            console.log(b);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
