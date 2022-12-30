@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(23, 95, 98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+#form-container {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px 0px 10px 0px;
+}
+
+input {
+    width: 200px;
+    margin: 10px 0px;
+    padding: 10px;
+    border: 2px solid;
+    font-size: 25PX;
+
+}
+
+input[type="submit"] {
+    width: 225px;
+    border: 2px solid;
+    background-color: rgb(23, 95, 98);
+    color: #fff;
+    font-size: 25px;
+}
+
+.error {
+    color: red;
+    margin: 0px;
+    text-align: left;
+}
