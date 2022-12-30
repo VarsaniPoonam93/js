@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> form validation</title>
+    <link rel="stylesheet" href="valiform.css">
+</head>
+
+<body>
+
+    <div id="form-container">
+
+        <h2>Login</h2>
+        <form action="" onsubmit="return validateform()">
+
+            <input type="text" placeholder="User Name" id="username"><br>
+            <p id="userError" class="error"></p>
+
+
+            <input type="password" placeholder="Password" id="password"><br>
+            <p id="passError" class="error"></p>
+            <input type="number" placeholder="Age" id="age"><br>
+            <p id="ageError" class="error"></p>
+
+
+            <input type="tel" placeholder="Phone Number"  id="Phone"> <br>
+            <p id="phoneError" class="error"></p>
+            <input type="Submit">
+        </form>
+    </div>
+
+    <script>
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let age = document.getElementById("age");
+        let Phone = document.getElementById("Phone");
+
+
+
+        function validateform() {
+
+            if (username.value == "") {
+
+                document.getElementById("userError").innerHTML = "User Name Is empty";
+
+
+            }
+            else if (username.value.length < 3) {
+                document.getElementById("userError").innerHTML = "User Name require min 3 charactor";
+            }
+            else {
+                document.getElementById("userError").innerHTML = "";
+
+            }
+
+
+            if (password.value == "") {
+                document.getElementById("passError").innerHTML = "Password is empty";
+
+            }
+            else if (password.value.length < 6) {
+                document.getElementById("passError").innerHTML = "Password require min 6 charactor"
+
+            }
+
+
+            if (age.value < 18) {
+                document.getElementById("ageError").innerHTML = " +18 is valid";
+                // return false
+            }
+            else {
+                document.getElementById("ageError").innerHTML = ""
+                return true
+            }
+
+
+
+            if (Phone.value == "") {
+                // console.log("called inside if");
+                document.getElementById("phoneError").innerHTML = "enter a mobile number country code"
+                // console.log("coll");
+                return false
+
+            }
+            else {
+                // console.log("called inside else");
+                document.getElementById("phoneError").innerHTML = ""
+                return true
+            }
+
+            // }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html
